@@ -10,12 +10,14 @@ import Sidebar from './components/Sidebar';
 import Overview  from './pages/Overview';
 import Analytics from './pages/Analytics';
 import Customers from './pages/Customers';
+import TableauView from './pages/TableauView';
 import { MdDownload } from 'react-icons/md';
 import { useFilters } from './context/FilterContext';
 import { api } from './services/api';
 
 const PAGE_META = {
   '/':           { title: 'Dashboard Overview',  subtitle: 'Executive summary & KPIs' },
+  '/tableau':    { title: 'Tableau Dashboard',   subtitle: 'Embedded Tableau Visualization' },
   '/analytics':  { title: 'Sales Analytics',     subtitle: 'Deep-dive performance metrics' },
   '/customers':  { title: 'Customer Insights',   subtitle: 'Segment & behaviour analysis' },
 };
@@ -145,6 +147,7 @@ function AppShell() {
         {/* Page content */}
         <Routes>
           <Route path="/"           element={<Overview />}  />
+          <Route path="/tableau"    element={<TableauView />} />
           <Route path="/analytics"  element={<Analytics />} />
           <Route path="/customers"  element={<Customers />} />
         </Routes>

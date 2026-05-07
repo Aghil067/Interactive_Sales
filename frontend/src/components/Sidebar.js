@@ -8,6 +8,7 @@ import { useTheme } from '../context/ThemeContext';
 
 const NAV_ITEMS = [
   { to: '/',          icon: MdDashboard, label: 'Overview' },
+  { to: '/tableau',   icon: MdBarChart,  label: 'Tableau Dashboard' },
   { to: '/analytics', icon: MdBarChart,  label: 'Sales Analytics' },
   { to: '/customers', icon: MdPeople,    label: 'Customers' },
 ];
