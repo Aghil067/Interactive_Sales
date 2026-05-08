@@ -1,10 +1,8 @@
 import React from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import {
-  MdDashboard, MdBarChart, MdPeople, MdFilterList,
-  MdLightMode, MdDarkMode, MdDownload,
+  MdDashboard, MdBarChart, MdPeople, MdDownload,
 } from 'react-icons/md';
-import { useTheme } from '../context/ThemeContext';
 
 const NAV_ITEMS = [
   { to: '/',          icon: MdDashboard, label: 'Overview' },
@@ -14,8 +12,6 @@ const NAV_ITEMS = [
 ];
 
 export default function Sidebar({ onExport }) {
-  const { theme, toggle } = useTheme();
-
   return (
     <aside className="sidebar">
       {/* Logo */}
@@ -52,13 +48,6 @@ export default function Sidebar({ onExport }) {
 
       {/* Footer controls */}
       <div className="sidebar-footer">
-        <button className="nav-link" onClick={toggle} style={{ border: '1px solid var(--border)', background: 'var(--bg-hover)', borderRadius: 8, marginBottom: 8 }}>
-          {theme === 'dark'
-            ? <><MdLightMode className="nav-icon" /> Light Mode</>
-            : <><MdDarkMode  className="nav-icon" /> Dark Mode</>
-          }
-        </button>
-        
         <div className="export-select" style={{ display: 'flex', flexDirection: 'column', gap: 6, padding: '4px 0' }}>
            <div className="text-xs" style={{ color: 'var(--text-muted)', fontWeight: 600, paddingLeft: 12, marginBottom: 4 }}>EXPORT DATA</div>
            <button className="nav-link" onClick={() => onExport('pdf')} style={{ padding: '8px 12px' }}>

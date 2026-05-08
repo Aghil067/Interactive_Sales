@@ -101,7 +101,7 @@ function AppShell() {
       el.style.height = 'auto';
       el.style.overflow = 'visible';
 
-      const canvas = await html2canvas(el, { scale: 1.5, useCORS: true, backgroundColor: '#05060b' });
+      const canvas = await html2canvas(el, { scale: 1.5, useCORS: true, backgroundColor: '#fffbfb' });
       
       el.style.height = oldH;
       el.style.overflow = oldOver;

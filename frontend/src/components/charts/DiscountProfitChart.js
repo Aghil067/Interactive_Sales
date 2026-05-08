@@ -51,11 +51,11 @@ export default function DiscountProfitChart() {
         {loading ? <div className="skeleton" style={{ height: 220 }} /> : (
           <ResponsiveContainer width="100%" height={220}>
             <BarChart data={data} margin={{ left: 0, right: 8 }}>
-              <CartesianGrid stroke="rgba(255,255,255,0.05)" strokeDasharray="3 3" />
-              <XAxis dataKey="label" tick={{ fill: '#475569', fontSize: 11 }} axisLine={false} tickLine={false} />
-              <YAxis tickFormatter={v => fmtCurrency(v, true)} tick={{ fill: '#475569', fontSize: 11 }} axisLine={false} tickLine={false} width={70} />
+              <CartesianGrid stroke="rgba(225,29,72,0.07)" strokeDasharray="3 3" />
+              <XAxis dataKey="label" tick={{ fill: '#886d73', fontSize: 11 }} axisLine={false} tickLine={false} />
+              <YAxis tickFormatter={v => fmtCurrency(v, true)} tick={{ fill: '#886d73', fontSize: 11 }} axisLine={false} tickLine={false} width={70} />
               <Tooltip content={<ChartTooltip />} cursor={{ fill: 'rgba(99,102,241,0.06)' }} />
-              <ReferenceLine y={0} stroke="rgba(255,255,255,0.15)" />
+              <ReferenceLine y={0} stroke="rgba(225,29,72,0.2)" />
               <Bar dataKey="avgProfit" radius={[5, 5, 0, 0]}>
                 {data.map((entry, i) => (
                   <Cell key={i} fill={entry.avgProfit < 0 ? '#ef4444' : COLORS[i % COLORS.length]} />

@@ -66,8 +66,8 @@ function RegionRadar({ filters }) {
                   </feMerge>
                 </filter>
               </defs>
-              <PolarGrid stroke="rgba(255,255,255,0.1)" strokeDasharray="3 3"/>
-              <PolarAngleAxis dataKey="region" tick={{ fill: '#cbd5e1', fontSize: 16, fontWeight: 800 }} />
+              <PolarGrid stroke="rgba(225,29,72,0.1)" strokeDasharray="3 3"/>
+              <PolarAngleAxis dataKey="region" tick={{ fill: '#4c1d28', fontSize: 16, fontWeight: 800 }} />
               <PolarRadiusAxis tick={false} axisLine={false} />
               <Radar
                 name="Revenue (relative %)"
@@ -91,7 +91,7 @@ function RegionRadar({ filters }) {
         <div style={{ fontSize: 12, color: 'var(--text-muted)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: 0.5, marginBottom: 4 }}>Region Breakdown</div>
         {[...rawRegions].sort((a, b) => b.sales - a.sales).map((r, i) => {
           const pct = totalRegionSales ? Math.round((r.sales / totalRegionSales) * 100) : 0;
-          const rankColors = ['#6366f1', '#10b981', '#f59e0b', '#ef4444'];
+          const rankColors = ['#e11d48', '#059669', '#f59e0b', '#8b5cf6'];
           return (
             <div key={r.name} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '10px 12px', background: 'var(--bg-hover)', borderRadius: 10, borderLeft: `4px solid ${rankColors[i] || '#64748b'}` }}>
               <div style={{ width: 28, height: 28, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 800, background: rankColors[i] + '20', color: rankColors[i] }}>#{i + 1}</div>

@@ -62,12 +62,12 @@ export default function CategoryChart() {
             <BarChart data={data} layout="vertical" onClick={handleClick}
               style={{ cursor: 'pointer' }}
               margin={{ left: 0, right: 16, top: 0, bottom: 0 }}>
-              <CartesianGrid stroke="rgba(255,255,255,0.05)" strokeDasharray="3 3" horizontal={false} />
+              <CartesianGrid stroke="rgba(225,29,72,0.07)" strokeDasharray="3 3" horizontal={false} />
               <XAxis type="number" tickFormatter={v => metric === 'orders' ? v : fmtCurrency(v, true)}
                 domain={[0, 'auto']} allowDataOverflow
-                tick={{ fill: '#475569', fontSize: 11 }} axisLine={false} tickLine={false} />
+                tick={{ fill: '#886d73', fontSize: 11 }} axisLine={false} tickLine={false} />
               <YAxis type="category" dataKey="name" width={110}
-                tick={{ fill: '#94a3b8', fontSize: 11 }} axisLine={false} tickLine={false} />
+                tick={{ fill: '#886d73', fontSize: 11 }} axisLine={false} tickLine={false} />
               <Tooltip content={<ChartTooltip metric={metric} />} cursor={false} />
               <Bar dataKey={metric} radius={[0, 5, 5, 0]}>
                 {data.map((entry, i) => {
@@ -75,7 +75,7 @@ export default function CategoryChart() {
                   return (
                     <Cell
                       key={entry.name}
-                      fill={isActive ? '#fff' : COLORS[i % COLORS.length]}
+                      fill={isActive ? '#e11d48' : COLORS[i % COLORS.length]}
                       opacity={crossFilter && !isActive ? 0.35 : 1}
                     />
                   );

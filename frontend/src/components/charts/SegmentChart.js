@@ -54,9 +54,9 @@ export default function SegmentChart() {
               if (activePayload?.[0]?.payload?.name)
                 applyCrossFilter('segment', activePayload[0].payload.name);
             }} style={{ cursor: 'pointer' }}>
-              <CartesianGrid stroke="rgba(255,255,255,0.05)" strokeDasharray="3 3" />
-              <XAxis dataKey="name" tick={{ fill: '#475569', fontSize: 12 }} axisLine={false} tickLine={false} />
-              <YAxis tickFormatter={v => fmtCurrency(v, true)} tick={{ fill: '#475569', fontSize: 11 }} axisLine={false} tickLine={false} width={70} />
+              <CartesianGrid stroke="rgba(225,29,72,0.07)" strokeDasharray="3 3" />
+              <XAxis dataKey="name" tick={{ fill: '#886d73', fontSize: 12 }} axisLine={false} tickLine={false} />
+              <YAxis tickFormatter={v => fmtCurrency(v, true)} tick={{ fill: '#886d73', fontSize: 11 }} axisLine={false} tickLine={false} width={70} />
               <Tooltip content={<ChartTooltip />} cursor={{ fill: 'rgba(99,102,241,0.06)' }} />
               <Legend iconType="circle" iconSize={8}
                 formatter={v => <span style={{ color: 'var(--text-secondary)', fontSize: 12 }}>{v === 'sales' ? 'Revenue' : 'Profit'}</span>} />

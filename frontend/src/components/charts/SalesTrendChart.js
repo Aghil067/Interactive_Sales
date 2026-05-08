@@ -119,9 +119,9 @@ export default function SalesTrendChart() {
                   <stop offset="95%" stopColor={COLORS[1]} stopOpacity={0}    />
                 </linearGradient>
               </defs>
-              <CartesianGrid stroke="rgba(255,255,255,0.05)" strokeDasharray="3 3" />
-              <XAxis dataKey="name" tick={{ fill: '#475569', fontSize: 11 }} axisLine={false} tickLine={false} />
-              <YAxis tickFormatter={v => fmtCurrency(v, true)} tick={{ fill: '#475569', fontSize: 11 }} axisLine={false} tickLine={false} width={70} />
+              <CartesianGrid stroke="rgba(225,29,72,0.07)" strokeDasharray="3 3" />
+              <XAxis dataKey="name" tick={{ fill: '#886d73', fontSize: 11 }} axisLine={false} tickLine={false} />
+              <YAxis tickFormatter={v => fmtCurrency(v, true)} tick={{ fill: '#886d73', fontSize: 11 }} axisLine={false} tickLine={false} width={70} />
               <Tooltip content={<ChartTooltip />} />
               <Legend iconType="circle" iconSize={8}
                 formatter={v => <span style={{ color: 'var(--text-secondary)', fontSize: 12 }}>{v === 'sales' ? 'Revenue' : v === 'predictedSales' ? 'AI Prediction' : 'Profit'}</span>} />

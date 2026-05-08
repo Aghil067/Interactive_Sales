@@ -47,19 +47,19 @@ export function percentChange(current, prev) {
   return ((current - prev) / prev) * 100;
 }
 
-/** Chart color palette */
+/** Chart color palette — no blue */
 export const COLORS = [
-  '#4f46e5', // Indigo
-  '#0ea5e9', // Light Blue
-  '#10b981', // Emerald Green
-  '#f59e0b', // Amber/Yellow
-  '#f43f5e', // Rose/Red
+  '#e11d48', // Rose
+  '#f59e0b', // Amber
+  '#059669', // Emerald
   '#8b5cf6', // Violet
+  '#f97316', // Orange
   '#ec4899', // Pink
   '#14b8a6', // Teal
+  '#84cc16', // Lime
 ];
 
 export const CHART_COMMON = {
-  cartesianGrid: { stroke: 'rgba(255,255,255,0.05)', strokeDasharray: '3 3' },
-  axis: { tick: { fill: '#475569', fontSize: 11 }, axisLine: false, tickLine: false },
+  cartesianGrid: { stroke: 'rgba(225,29,72,0.06)', strokeDasharray: '3 3' },
+  axis: { tick: { fill: '#886d73', fontSize: 11 }, axisLine: false, tickLine: false },
 };
